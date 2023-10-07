@@ -1,0 +1,19 @@
+button
+{
+    border:0;
+    width: 12vw;
+    height: 6vh;
+    color:var(--branco);
+    background-color: var(--preto);
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+
+}
+
+button:hover
+{
+    color: var(--preto);
+    background-color: var(--branco);
+    cursor: pointer;
+}
