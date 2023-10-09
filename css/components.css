@@ -17,3 +17,53 @@ button:hover
     background-color: var(--branco);
     cursor: pointer;
 }
+
+footer
+{
+    width: 100%;
+    background-color: var(--preto);
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    color: var(--branco);
+    margin-top:30vh;
+    position: absolute;
+    bottom: 0;
+  
+    
+}
+.footerLogo
+{
+    max-width: 200px;
+}
+
+.logoRedes
+{
+    display: grid;
+    grid-template-columns: 50px 50px 50px;
+    grid-template-rows: 50px 50px;
+    align-items: center;
+    justify-content:center ;
+}
+
+.logoRedes img
+{
+    max-width:80%;
+    cursor: pointer;
+}
+.footerCTA
+{
+    font-size:1.5rem;
+}
+
+.pagTitle
+{
+    color:var(--branco);
+    align-self: start;
+    justify-self: start;
+    margin-top:10vh;
+}
+.pagTitle img
+{
+    max-width: 200px;
+}

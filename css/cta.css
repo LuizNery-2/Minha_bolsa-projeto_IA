@@ -28,10 +28,3 @@
     left: 0;
     padding-left: 3px;
 }
-.menu
-{   object-fit: contain;
-    max-width: 2.5%;
-    position: inherit;
-    right: 0;
-    padding-right: 10px;
-}

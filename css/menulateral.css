@@ -11,7 +11,7 @@
     align-items: center;
     justify-content: start;
     gap: 30px;
-    opacity: 1;
+    display: none;
 
 }
 
@@ -30,4 +30,28 @@
     gap: 10px;
     color: var(--branco);
     
+}
+
+.menu
+{   object-fit: contain;
+    max-width: 2.5%;
+    position: inherit;
+    right: 0;
+    padding-right: 10px;
+    cursor: pointer;
+
+}
+
+.menulateral a
+{
+    text-decoration: none;
+}
+.menulateral a:hover
+{
+    text-decoration: underline;
+}
+
+.menulateral a:visited
+{
+    color: var(--branco);
 }
