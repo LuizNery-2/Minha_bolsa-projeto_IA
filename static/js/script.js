@@ -22,17 +22,34 @@
             
     }
     function irParaLogin() {
-        window.location.href = "./html/login.html";
+        carregarPagina('login');
     }
-     function irParaCadastro() {
-      window.location.href = "./html/cadastro.html";
+    
+    function irParaCadastro() {
+        carregarPagina('cadastro');
     }
+    
     function irParaMinhaSessao() {
-        window.location.href = "./minhaSessao.html";
-      }
-      function irParaMinhasMetricas() {
-        window.location.href = "./minhaMetricas.html";
-      }
+        carregarPagina('minhaSessao');
+    }
+    
+    function irParaMinhasMetricas() {
+        carregarPagina('minhaMetricas');
+    }
+    function irParaIniciarSessao(){
+        carregarPagina('IniciarSessao');
+    }
+    
+    function carregarPagina(pagina) {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                document.documentElement.innerHTML = xhr.responseText;
+            }
+        };
+        xhr.open('GET', '/pagina/' + pagina, true);
+        xhr.send();
+    }
 
 
     menu()  
