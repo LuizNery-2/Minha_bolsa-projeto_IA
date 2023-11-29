@@ -4,7 +4,7 @@ button
     width: 12vw;
     height: 6vh;
     color:var(--branco);
-    background-color: var(--preto);
+    background-color: var(--roxo-claro);
     border-radius: 8px;
     font-weight: bold;
     font-size: 1rem;
@@ -13,20 +13,20 @@ button
 
 button:hover
 {
-    color: var(--preto);
-    background-color: var(--branco);
+    color: var(--branco);
+    background-color: var(--laranja);
     cursor: pointer;
 }
 
 footer
 {
     width: 100%;
-    background-color: var(--preto);
+    background-color: var(--roxo-claro);
     display: flex;
     align-items:center;
     justify-content: space-around;
     color: var(--branco);
-    margin-top:30vh;
+    margin-top:10vh;
     position: absolute;
     bottom: 0;
   
@@ -34,21 +34,22 @@ footer
 }
 .footerLogo
 {
-    max-width: 200px;
+    max-width: 100px;
+    margin-left: -20vh;
 }
 
 .logoRedes
 {
     display: grid;
-    grid-template-columns: 50px 50px 50px;
-    grid-template-rows: 50px 50px;
+    grid-template-columns: 50px 50px ;
+    grid-template-rows: 30px 30px ;
     align-items: center;
     justify-content:center ;
 }
 
 .logoRedes img
 {
-    max-width:80%;
+    max-width:30%;
     cursor: pointer;
 }
 .footerCTA
@@ -65,5 +66,13 @@ footer
 }
 .pagTitle img
 {
-    max-width: 200px;
+    max-width: 100px;
+    margin-left: -89vh;
+}
+.pagTitle p{
+    color: var(--preto);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2vh;
+    margin-left: -109vh;
+    margin-top: 15vh;
 }

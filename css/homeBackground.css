@@ -12,16 +12,3 @@
 
 }
 
-.homeBackground img
-{   
-    object-fit: contain;
-    max-height: 68vh;
-    position: relative;
-    opacity: 0.6;
-}
-
-#imgProuni
-{
-    max-width: 200px;
-    align-self: flex-end;
-}

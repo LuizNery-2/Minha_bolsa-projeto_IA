@@ -1,6 +1,6 @@
 form
 {   
-    background-color: var(--azul-background);
+    background-color: var(--roxo-claro);
     display: flex;
     flex-direction:column;
     width: 25vw;
@@ -35,38 +35,6 @@ form input
 {   object-fit: contain;
     max-width: 40%;
     margin-top: -25px;
-}
-
-.ou
-{
-    display: flex;
-    flex-direction:row;
-    gap: 4px;
-    align-items: center;
-    margin-left: 1rem;
-}
-.ou hr
-{
-    width:40%;
-}
-.logoRedes
-{
-    display: flex;
-    justify-content:space-around;
-}
-.logoRedes img
-{
-    width: 50px;
-    object-fit: contain;
-}
-#facebook
-{
-  width:45px
-}
-
-#apple
-{
-    width:60px
 }
 button
 {

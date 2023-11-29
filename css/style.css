@@ -1,6 +1,7 @@
 :root
 {
     --azul-background: #150096;
+    --roxo-claro: #422C6C;
     --preto: #1E1E1E;
     --laranja:#FF7F0A;
     --branco:#FFFFFF;
@@ -20,7 +21,7 @@
 }
 body
 {
-    background-color: var(--azul-background);
+    background-color: var(--cinza-background);
     display: flex;
     flex-direction: column;
     align-items: center;

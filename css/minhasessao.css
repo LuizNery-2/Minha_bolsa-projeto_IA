@@ -14,7 +14,7 @@
 .minhaSessao
 {
     display: flex;
-    color: var(--branco);
+    color: var(--roxo-claro);
     grid-area: form;
     height: 100%;
     width: 100%;
@@ -33,37 +33,33 @@
 .tituloIMG
 {
     grid-area: titulo;
-    color: var(--branco);
+    color: var(--preto);
     height: 20%;
+    margin-left: -6vh;
+    margin-top: 10vh;
+    font-size: 2vh;
+
 }
 
 .tituloIMG img
 {
-    max-width: 200px;
-}
-.anuncio{
-    grid-area: ads;
-    width:10vw;
-    justify-self: start;
-   
-    
-    
+    max-width: 100px;
 }
 
-.anuncio img
-{
-   object-fit: contain;
-   max-height: 150%;
-   
-}
 
 .minhaSessao input
 {
-    background-color: var(--azul-input);
+    background-color: var(--cinza-background-escuro);
     border: none;
     height: 4vh;
     border-radius: 3px;
     font-size: 1rem;
-    color: var(--branco);
+    color: var(--preto);
 }
-
+.sexo{
+    width: 13vh;
+    height: 50px;
+    font-size: 20px;
+    background: var(--cinza-background-escuro);
+    padding-left: 100px
+}

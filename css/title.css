@@ -10,16 +10,10 @@
 
 .title img 
 {
-    max-width: 80vw;
+    max-width: 50vw;
     margin-left: 5rem;
+    margin-top: 7vh;
     object-fit: contain;
     backdrop-filter: none;
 
-}
-.prouniImg
-{
-    bottom: 0;
-    opacity: 0.5;
-    margin-top:20vh;
-    width: 200px;
 }
