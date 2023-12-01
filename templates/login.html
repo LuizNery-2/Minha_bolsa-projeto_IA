@@ -18,7 +18,7 @@
         <img src="../img/minhaBolsaLOGO.png" class="logoMinhaBolsa" alt="">
         <h3>Aqui você encontra o tipo de sua bolsa concedida</h3>
     </header>
-    <form>
+    <div>
         <div class="bemVindoLogin">
             <p>Bem vindo ao</p>
             <img src="../img/minhaBolsaLOGO.png" alt=""> <p>!</p>
@@ -27,11 +27,11 @@
         <input type="email" id="emailLogin">
         <label for="passwordLogin">Senha</label>
         <input type="password" id="passwordLogin">
-        <button onclick="irParaIniciarSessao()">Entrar</button>
+        <button onclick="irParaMinhaSessao()">Entrar</button>
         <div class="irCadastrar">
             <p>Não possui conta? <a href="./cadastro.html">Cadastre-se</a></p>
         </div>
-    </form>
-
+    </div>
+<script src="{{url_for('static', filename='js/script.js')}}"></script>
 </body>
 </html>
