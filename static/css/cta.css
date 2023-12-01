@@ -1,0 +1,39 @@
+
+.cta
+{
+    background-color: var(--roxo-claro);
+    height: 50px;
+    position:  fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    
+    
+   
+
+}
+.cta h3
+{   
+    
+    color: var(--branco);
+    font-family: Arial;
+    margin-left: 25%;
+    margin-right: 25%;
+    align-self: center;
+    
+   
+}
+.logoMinhaBolsa
+{
+    object-fit: contain;
+    max-width: 10%;
+    position: inherit;
+    left: 0;
+    padding-left: 3px;
+}
+.cta img{
+    width: 8rem;
+    padding: 5px;
+}
+

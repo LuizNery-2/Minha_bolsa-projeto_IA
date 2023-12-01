@@ -1,0 +1,58 @@
+form
+{   
+    background-color: var(--roxo-claro);
+    display: flex;
+    flex-direction:column;
+    width: 25vw;
+    margin-top: 12vh;
+    padding: 5vh 5vw 5vh 5vw;
+    gap: 2vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--cinza-background);
+    font-size: 0.8rem;
+    border-radius:8px
+
+}
+
+form input
+{
+    height: 5vh;
+    width: 25vw;
+    background-color: var(--branco);
+    border: none;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 3px;
+}
+.bemVindoLogin
+{
+    display: flex;
+    gap: 6px;
+    font-size: 1.5rem;
+    
+}
+.bemVindoLogin img
+{   object-fit: contain;
+    max-width: 40%;
+    margin-top: -25px;
+}
+button
+{
+    align-self: center;
+}
+.irCadastrar
+{
+    align-self: end;
+    margin-right: -20px;
+    
+}
+.irCadastrar a
+{
+    color:var(--laranja);
+    text-decoration:none;
+    cursor: pointer;
+}
+a:hover
+{
+    text-decoration: underline;
+}

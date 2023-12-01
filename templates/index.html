@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINHA BOLSA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cta.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/title.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/homeBackground.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+</head>
+<body>
+    <header class="cta">
+        <h3>Aqui você encontra o tipo de sua bolsa concedida</h3>
+    </header>
+    <section class="title">
+        <img src="{{ url_for('static', filename='img/minhaBolsaLOGO.png') }}" alt="">
+        <button onclick="irParaLogin()">Login</button>
+        <button onclick="irParaCadastro()">Criar conta</button>
+    </section>
+    <section>
+        <div class="homeBackground">
+            
+        </div>
+    </section>
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
+    
+</body>
+</html>
