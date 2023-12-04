@@ -3,25 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/cta.css">
-    <link rel="stylesheet" href="../css/login.css">
-    <link rel="stylesheet" href="../css/components.css">
-    <link rel="stylesheet" href="../css/menuLateral.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/cta.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/login.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/components.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/menuLateral.css')}}">
    
-    
 
     <title>MINHABOLSA - LOGIN</title>
 </head>
 <body class="backgroundCinza">
     <header class="cta">
-        <img src="../img/minhaBolsaLOGO.png" class="logoMinhaBolsa" alt="">
+        <img src="{{url_for('static', filename='img/minhaBolsaLOGO.png')}}" class="logoMinhaBolsa" alt="">
         <h3>Aqui você encontra o tipo de sua bolsa concedida</h3>
     </header>
-    <div>
+    <form action="{{url_for('iniciarsessao')}}">
         <div class="bemVindoLogin">
             <p>Bem vindo ao</p>
-            <img src="../img/minhaBolsaLOGO.png" alt=""> <p>!</p>
+            <img src="{{url_for('static', filename='img/minhaBolsaLOGO.png')}}" alt=""> <p>!</p>
         </div>
         <label for="emailLogin">Email</label>
         <input type="email" id="emailLogin">
@@ -29,9 +28,10 @@
         <input type="password" id="passwordLogin">
         <button onclick="irParaMinhaSessao()">Entrar</button>
         <div class="irCadastrar">
-            <p>Não possui conta? <a href="./cadastro.html">Cadastre-se</a></p>
+            <p>Não possui conta? <a href="{{ url_for('cadastro') }}">Cadastre-se</a></p>
         </div>
-    </div>
+    </form>
 <script src="{{url_for('static', filename='js/script.js')}}"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </body>
 </html>

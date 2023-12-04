@@ -33,3 +33,40 @@ body
 {
     background-color: var(--branco);
 }
+
+.imagem-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.imagem-container img
+{
+    max-width:30%;
+    object-fit: contain;
+}
+
+.imagem-expansivel {
+    cursor: pointer;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+.imagem-expandida {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1000%;
+    max-height: 1000%;
+    display: none;
+}

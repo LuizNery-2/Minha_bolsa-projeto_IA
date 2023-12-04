@@ -11,10 +11,12 @@ class visualizacao_dados:
 
         self.data = data;
 
-    def count_plot_target(self):
-        sns.countplot(x='TIPO_BOLSA',data=self.data)
-        return plt.show()
-    def count_plot_df(self):
+    def count_plot_target(self, save_path="static/target_plot.png"):
+        sns.countplot(x='TIPO_BOLSA', data=self.data)
+        plt.savefig(save_path)
+        plt.close()
+
+    def count_plot_df(self, save_path="static/df_plot.png"):
         df = self.data
         top_n = 10
         fig, axes = plt.subplots(3, 4, figsize=(20, 10))
@@ -34,6 +36,7 @@ class visualizacao_dados:
             axes[i // 4, i % 4].set_xlabel("Contagem")
             axes[i // 4, i % 4].set_ylabel("Categoria")
             axes[i // 4, i % 4].set_title(f" {column}")
-        
+
         plt.tight_layout()
-        return plt.show()
+        plt.savefig(save_path)
+        plt.close()

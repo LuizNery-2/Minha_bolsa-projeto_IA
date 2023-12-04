@@ -21,6 +21,22 @@
         })
             
     }
+    function carregarPagina(pagina) {
+        $.ajax({
+            type: 'GET',
+            url: '/' + pagina,
+            success: function (data) {
+                $('body').html(data);
+                
+                history.replaceState({}, '', '/' + pagina);
+                location.reload();
+            },
+            error: function (error) {
+                console.log('Erro ao carregar a página:', error);
+            }
+        });
+    }
+    
     function irParaLogin() {
         carregarPagina('login');
     }
@@ -30,27 +46,33 @@
     }
     
     function irParaMinhaSessao() {
-        carregarPagina('minhaSessao');
+        carregarPagina('minhasessao');
     }
     
     function irParaMinhasMetricas() {
-        carregarPagina('minhaMetricas');
-    }
-    function irParaIniciarSessao(){
-        carregarPagina('IniciarSessao');
+        carregarPagina('minhasmetricas');
     }
     
-    function carregarPagina(pagina) {
-        var xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                document.documentElement.innerHTML = xhr.responseText;
-            }
-        };
-        xhr.open('GET', '/pagina/' + pagina, true);
-        xhr.send();
+    function irParaIniciarSessao() {
+        carregarPagina('iniciarsessao');
     }
-
+    
+    function expandirImagem(imagem) {
+        var overlay = document.getElementById("overlay");
+        var imagemExpandida = document.getElementById("imagem-expandida");
+    
+        overlay.style.display = "block";
+        imagemExpandida.innerHTML = "<img src='" + imagem.src + "' alt='" + imagem.alt + "'>";
+        imagemExpandida.style.display = "block";
+    }
+    
+    function fecharImagem() {
+        var overlay = document.getElementById("overlay");
+        var imagemExpandida = document.getElementById("imagem-expandida");
+    
+        overlay.style.display = "none";
+        imagemExpandida.style.display = "none";
+    }
 
     menu()  
 
