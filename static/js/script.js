@@ -21,6 +21,19 @@
         })
             
     }
+    function carregarPagina(pagina) {
+        $.ajax({
+            type: 'GET',
+            url: '/' + pagina,
+            success: function (data) {
+                $('body').html(data);
+            },
+            error: function (error) {
+                console.log('Erro ao carregar a página:', error);
+            }
+        });
+    }
+    
     function irParaLogin() {
         carregarPagina('login');
     }
@@ -30,27 +43,17 @@
     }
     
     function irParaMinhaSessao() {
-        carregarPagina('minhaSessao');
+        carregarPagina('minhasessao');
     }
     
     function irParaMinhasMetricas() {
-        carregarPagina('minhaMetricas');
-    }
-    function irParaIniciarSessao(){
-        carregarPagina('IniciarSessao');
+        carregarPagina('minhasmetricas');
     }
     
-    function carregarPagina(pagina) {
-        var xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                document.documentElement.innerHTML = xhr.responseText;
-            }
-        };
-        xhr.open('GET', '/pagina/' + pagina, true);
-        xhr.send();
+    function irParaIniciarSessao() {
+        carregarPagina('iniciarsessao');
     }
-
+    
 
     menu()  
 

@@ -20,16 +20,17 @@
     <aside class="menulateral">
         <img src="../img/minhaBolsaLOGO.png" alt="">
         <div>
-            <span> <img src="../img/arcticons_session.png" class="icons"> <a href="minhaSessao.html">Minha sessão</a></span>
-            <span> <img src="../img/mdi-light_logout.png" class="icons"> <a href="minhaMetricas.html">Metricas</a></span>
-            <span> <img src="../img/mdi-light_logout (1).png" class="icons"> <a href="../index.html">logout</a></span>
+            <span> <img src="{{ url_for('static', filename='img/arcticons_session.png') }}" class="icons"> <a href="{{ url_for('minhasessao') }}">Minha sessão</a></span>
+            <span> <img src="{{ url_for('static', filename='img/mdi-light_logout.png') }}" class="icons"> <a href="{{ url_for('minhasmetricas') }}">Métricas</a></span>
+            <span> <img src="{{ url_for('static', filename='img/mdi-light_logout (1).png') }}" class="icons"> <a href="{{ url_for('index') }}">Logout</a></span>
+
         </div>
     </aside>
     <section class="minhaSessaoGrid">
         <div class="tituloIMG">
               <p>Preencha os campos abaixo para obter seus resultados.</p>
         </div>
-        <form action="" class="minhaSessao">
+        <form class="minhaSessao">
             <div>
                 <label for="nomeInstituicao">Nome da instituição:</label>
                 <input type="nomeInstituicao">
@@ -78,7 +79,7 @@
          </footer>
   
   
-    
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="../js/script.js"></script>
 </body>
 </html>

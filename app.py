@@ -6,9 +6,31 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/pagina/<nome_pagina>')
-def pagina(nome_pagina):
-    return render_template(f'{nome_pagina}.html')
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+
+@app.route('/minhasessao')
+def minhasessao():
+    return render_template('minhasessao.html')
+
+@app.route('/minhasmetricas')
+def minhasmetricas():    
+    return render_template('minhasmetricas.html')
+
+@app.route('/cadastro')
+def cadastro():
+    return render_template('cadastro.html')
+
+app.route('/iniciarsessao')
+def iniciarsessao():
+    return render_template('iniciarsessao.html')
+
+
+
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
