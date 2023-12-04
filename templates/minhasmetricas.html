@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/minhasessao.css')}}">
 </head>
 <body>
+   
     <header class="cta">
         <img src="{{url_for('static', filename='img/minhabolsalogo.png')}}" alt="">
         <h3>Aqui você encontra o tipo de sua bolsa concedida</h3>
@@ -28,10 +29,18 @@
     <section>
         <div class="title">
             <h2>Confira o seu resultado.</h2>
-      </div>
+            <h2 style="color: #FF7F0A;" >{{resultado}}</h2>
+            <h3>Graficos e estatisticas</h3>
+            <div class="imagem-container">
+                <img src="{{ url_for('static', filename='target_plot.png') }}" alt="Descrição da Imagem" class="imagem-expansivel" onclick="expandirImagem(this)">
+                <img src="{{ url_for('static', filename='df_plot.png') }}" alt="Descrição da Imagem" class="imagem-expansivel" onclick="expandirImagem(this)">
+                <div class="overlay" id="overlay" onclick="fecharImagem()"></div>
+                <div class="imagem-expandida" id="imagem-expandida"></div>
+            </div>
+        </div>
     
     </section>
-         <footer>
+         <footer style="position:relative;">
             <img src="{{url_for('static', filename='img/minhabolsalogo.png')}}" class="footerLogo" alt="">
             <p class="footerCTA">Entre em contato para mais informações.</p>
             <div class="contatos">

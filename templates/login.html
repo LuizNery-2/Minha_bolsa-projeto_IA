@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/components.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/menuLateral.css')}}">
    
-    
 
     <title>MINHABOLSA - LOGIN</title>
 </head>
@@ -18,7 +17,7 @@
         <img src="{{url_for('static', filename='img/minhaBolsaLOGO.png')}}" class="logoMinhaBolsa" alt="">
         <h3>Aqui você encontra o tipo de sua bolsa concedida</h3>
     </header>
-    <form>
+    <form action="{{url_for('iniciarsessao')}}">
         <div class="bemVindoLogin">
             <p>Bem vindo ao</p>
             <img src="{{url_for('static', filename='img/minhaBolsaLOGO.png')}}" alt=""> <p>!</p>

@@ -4,75 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MINHA BOLSA</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/cta.css">
-    <link rel="stylesheet" href="../css/title.css">
-    <link rel="stylesheet" href="../css/components.css">
-    <link rel="stylesheet" href="../css/menulateral.css">
-    <link rel="stylesheet" href="../css/minhasessao.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/cta.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/components.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/menuLateral.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/title.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/minhasessao.css')}}">
 </head>
 <body>
     <header class="cta">
-        <img src="../img/minhaBolsaLOGO.png" alt="">
+        <img src="{{url_for('static', filename='img/minhabolsalogo.png')}}" alt="">
         <h3>Aqui você encontra o tipo de sua bolsa concedida</h3>
-        <img src="../img/Vector.png" class="menu" alt="">
+        <img src="{{ url_for('static', filename='img/Vector.png') }}" class="menu" alt="">
     </header>
     <aside class="menulateral">
-        <img src="../img/minhaBolsaLOGO.png" alt="">
+        <img src="{{ url_for('static', filename='img/minhabolsalogo.png')}}" alt="">
         <div>
-            <span> <img src="{{ url_for('static', filename='img/arcticons_session.png') }}" class="icons"> <a href="{{ url_for('minhasessao') }}">Minha sessão</a></span>
-            <span> <img src="{{ url_for('static', filename='img/mdi-light_logout.png') }}" class="icons"> <a href="{{ url_for('minhasmetricas') }}">Métricas</a></span>
-            <span> <img src="{{ url_for('static', filename='img/mdi-light_logout (1).png') }}" class="icons"> <a href="{{ url_for('index') }}">Logout</a></span>
-
+            <span> <img src="{{ url_for('static', filename='img/arcticons_session.png') }}" class="icons"> <a href="{{ url_for('minhasessao')}}">Minha sessão</a></span>
+            <span> <img src="{{ url_for('static', filename='img/mdi-light_logout.png') }}" class="icons"> <a href="{{ url_for('minhasmetricas')}}">Metricas</a></span>
+            <span> <img src="{{ url_for('static', filename='img/mdi-light_logout (1).png') }}" class="icons"> <a href="{{ url_for('index')}}">Logout</a></span>
         </div>
     </aside>
     <section class="minhaSessaoGrid">
         <div class="tituloIMG">
               <p>Preencha os campos abaixo para obter seus resultados.</p>
         </div>
-        <form class="minhaSessao">
+        <form class="minhaSessao" method="post" action="/minhasmetricas">
             <div>
                 <label for="nomeInstituicao">Nome da instituição:</label>
-                <input type="nomeInstituicao">
-                <label for="moduloEnsino">Módulo de ensino:</label>
-                <input type="moduloEnsino">
+                <select for="nomeInstituicao" name="NOME_IES_BOLSA">
+                    <option value="0">PONTIFÍCIA UNIVERSIDADE CATÓLICA DO PARANÁ</option>
+                    <option value="1">UNIVERSIDADE CATÓLICA DE PERNAMBUCO</option>
+                    <option value="2">UNIVERSIDADE DO VALE DO RIO DOS SINOS</option>
+                    <option value="3">UNIVERSIDADE PRESBITERIANA MACKENZIE</option>
+                    <option value="4">UNIVERSIDADE JOSÉ DO ROSÁRIO VELLANO</option>
+                    <option value="5">CENTRO UNIVERSITÁRIO PARA O DESENVOLVIMENTO DO ALTO VALE DO ITAJAÍ</option>
+                    <option value="6">UNIVERSIDADE DO OESTE DE SANTA CATARINA</option>
+                    <option value="7">UNIVERSIDADE DA REGIÃO DE JOINVILLE</option>
+                    <option value="8">UNIVERSIDADE FEEVALE</option>
+                    <option value="9">UNIVERSIDADE DO VALE DO ITAJAÍ</option>
+                    <option value="10">FACULDADE DE FILOSOFIA CIÊNCIAS E LETRAS DE MACAÉ</option>
+                    <option value="11">UNIVERSIDADE DE ARARAQUARA</option>
+                    <option value="12">CENTRO UNIVERSITÁRIO DE ARARAS -</option>
+                    <option value="13">CENTRO UNIVERSITÁRIO CLARETIANO</option>
+                    <option value="14">CENTRO UNIVERSITÁRIO SAGRADO CORAÇÃO</option>
+                    <option value="15">CENTRO UNIVERSITÁRIO BARÃO DE MAUÁ</option>
+                    <option value="16">UNIVERSIDADE DE VASSOURAS</option>
+                    <option value="17">UNIVERSIDADE DE UBERABA</option>
+                    <option value="18">FACULDADE DE CIÊNCIAS HUMANAS DE OLINDA</option>
+                    <option value="19">CENTRO UNIVERSITÁRIO DE RIO PRETO</option>
+                    <option value="20">FACULDADE DE DIREITO DE VARGINHA - FADIVA</option>
+                    <option value="21">UNIVERSIDADE DE SOROCABA</option>
+                    <option value="22">FACULDADE FRASSINETTI DO RECIFE</option>
+                    <option value="23">UNIVERSIDADE ESTÁCIO DE SÁ</option>
+                    <option value="24">UNIVERSIDADE VEIGA DE ALMEIDA</option>
+                    <option value="25">FAI - CENTRO DE ENSINO SUPERIOR EM GESTÃO, TECNOLOGIA E EDUCAÇÃO</option>
+                    <option value="26">FACULDADE DE EDUCAÇÃO SUPERIOR DO PARANÁ</option>
+                    <option value="27">UNIVERSIDADE SÃO JUDAS TADEU</option>
+                    <option value="28">UNIVERSIDADE DE RIBEIRÃO PRETO</option>
+                    <option value="29">CENTRO UNIVERSITÁRIO ÁLVARES PENTEADO</option>
+                    <option value="30">UNIVERSIDADE CRUZEIRO DO SUL</option>
+                    <option value="31">FACULDADE PRESBITERIANA MACKENZIE RIO</option>
+                    <option value="32">CENTRO UNIVERSITÁRIO SAÚDE ABC</option>
+                    <option value="33">CENTRO UNIVERSITÁRIO LUSÍADA</option>
+                    <option value="34">UNIVERSIDADE CATÓLICA DE SANTOS</option>
+                    <option value="35">CENTRO UNIVERSITÁRIO MOURA LACERDA</option>
+                    <option value="36">FACULDADE DE EDUCAÇÃO CIÊNCIAS E ARTES DOM BOSCO DE MONTE APRAZÍVEL</option>
+                    <option value="37">CENTRO UNIVERSITÁRIO ANHANGUERA DE SANTO ANDRÉ</option>
+                    <option value="38">UNIVERSIDADE METODISTA DE PIRACICABA</option>
+                    <option value="39">FACULDADE FACCAT</option>
+                    <option value="40">UNIVERSIDADE DO VALE DO PARAÍBA</option>
+                    <option value="41">FACULDADES INTEGRADAS HÉLIO ALONSO</option>
+                    <option value="42">UNIVERSIDADE DE SANTA CRUZ DO SUL</option>
+                    <option value="43">CENTRO UNIVERSITÁRIO DA REGIÃO DA CAMPANHA</option>
+                    <option value="44">UNIVERSIDADE PITÁGORAS UNOPAR</option>
+                    <option value="45">CENTRO UNIVERSITÁRIO ESPÍRITO-SANTENSE/FAESA</option>
+                    <option value="46">FACULDADE TRÊS DE MAIO</option>
+                    <option value="47">FACULDADE DE SÃO BERNARDO DO CAMPO - FASB</option>
+                    <option value="48">FACULDADE DIVINÓPOLIS</option>
+                    <option value="49">FACULDADE DE MEDICINA DE BARBACENA</option>
+                    <option value="50">CENTRO UNIVERSITÁRIO PRESIDENTE ANTÔNIO CARLOS</option>
+                    <option value="51">UNIVERSIDADE NOVE DE JULHO</option>
+                    <option value="52">UNIVERSIDADE PAULISTA</option>
+                    <option value="53">PONTIFÍCIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS</option>
+                    <option value="54">CENTRO UNIVERSITÁRIO NEWTON PAIVA</option>
+                    <option value="55">CENTRO UNIVERSITÁRIO UNA</option>
+                    <option value="56">ESCOLA DE ENGENHARIA KENNEDY</option>
+                    <option value="57">CENTRO UNIVERSITÁRIO DE BELO HORIZONTE</option>
+                    <option value="58">CENTRO DE ENSINO SUPERIOR DE JUIZ DE FORA</option>
+                    <option value="59">UNIVERSIDADE CATÓLICA DE PETRÓPOLIS</option>
+                    <option value="60">UNIVERSIDADE CATÓLICA DE PELOTAS</option>
+                    <option value="61">PONTIFÍCIA UNIVERSIDADE CATÓLICA DE CAMPINAS</option>
+                    <option value="62">UNIVERSIDADE DE PASSO FUNDO</option>
+                    <option value="63">UNIVERSIDADE DE CAXIAS DO SUL</option>
+                    <option value="64">PONTIFÍCIA UNIVERSIDADE CATÓLICA DO RIO GRANDE DO SUL</option>
+                    <option value="65">FACULDADE DE JOSÉ BONIFÁCIO</option>
+                    <option value="66">FACULDADE ANHANGUERA DE NEGÓCIOS E TECNOLOGIAS DA INFORMAÇÃO</option>
+                    <option value="67">FACULDADE DE PRESIDENTE PRUDENTE</option>
+                </select>
+                <label for="moduloEnsino">Modalidade de ensino:</label>
+                <select name="MODALIDADE_ENSINO_BOLSA" required for="moduloEnsino">
+                    <option value="0">Presencial</option>
+                    <option value="1">EAD</option>
+                </select>
                 <label for="deficiencia">Você possui algum tipo de deficiência?</label>
-                <input type="deficiencia">
+                <select name="BENEFICIARIO_DEFICIENTE_FISICO" required for="deficiencia"> >
+                    <option value="0">Não</option>
+                    <option value="1">Sim</option>
+                </select>
             </div>
             <div>
                 <label for="nomeCurso">Nome do curso:</label>
-                <input type="nomeCurso">
+                <input type="nomeCurso" name="NOME_CURSO_BOLSA" required>
                 <label for="turno">Turno</label>
-                <span>
-                    <input type="turno">
-                    <label for="cidade">Cidade-uf:</label>
-                    <input type="cidade">
-                </span>
+                <select name="NOME_TURNO_CURSO_BOLSA" for="turno">
+                    <option value="0">Noturno</option>
+                    <option value="1">Matutino</option>
+                    <option value="2">Vespertino</option>
+                    <option value="3">Curso a distância</option>
+                    <option value="4">Integral</option>
+                </select>
+                <label for="regiao">Regiao</label>
+                <input type="regiao" name="REGIAO_BENEFICIARIO_BOLSA" required>
+                <label for="UF">Unidade federativa</label>
+                <input type="UF" name="SIGLA_UF_BENEFICIARIO_BOLSA" required>
                 <span>
                     <label for="sexo">Sexo</label>
-                    <select for="sexo">
+                    <select for="sexo" name="SEXO_BENEFICIARIO_BOLSA" required>
                         <option>Selecione uma opção</option>
-                        <option>Feminino</option>
-                        <option>Masculino</option>
+                        <option value="0">Feminino</option>
+                        <option value="1">Masculino</option>
                     </select>
                     <label for="racaCor">Raça/cor</label>
-                    <input type="racaCor">
+                    <select for="racaCor" name="RACA_BENEFICIARIO_BOLSA" required>
+                        <option value="0">Branca</option>
+                        <option value="1">Parda</option>
+                        <option value="2">Preta</option>
+                        <option value="3">Amarela</option>
+                        <option value="4">Indigena</option>
+                        <option value="5">Não informada</option>
+                    </select>
                 </span>
             </div>
+            <button type="submit">Calcular resutado</button>
         </form>
     </section>
-         <button onclick="irParaMinhasMetricas()">Calcular resutado</button>
+        
          <footer>
-            <img src="../img/minhaBolsaLOGO.png" class="footerLogo" alt="">
+            <img src="{{url_for('static', filename='img/minhabolsalogo.png')}}" class="footerLogo" alt="">
             <p class="footerCTA">Entre em contato para mais informações.</p>
             <div class="contatos">
                 <p>Encontre-nos nas redes sociais</p>
                 <div class="logoRedes">
-                    <img src="../img/facebook 1.png" alt="">
-                    <img src="../img/instagram 1.png" alt="">
-                    <img src="../img/whatsapp 1.png" alt="">
-                    <img src="../img/youtube 1.png" alt="">
-                 
+                    <img src="{{ url_for('static', filename='img/facebook 1.png') }}" alt="">
+                    <img src="{{ url_for('static', filename='img/instagram 1.png') }}" alt="">
+                    <img src="{{ url_for('static', filename='img/whatsapp 1.png') }}" alt="">
+                    <img src="{{ url_for('static', filename='img/logotipo-do-pinterest 1.png') }}" alt="">
+                    <img src="{{ url_for('static', filename='img/twitter 1.png') }}" alt="">
+                    <img src="{{ url_for('static', filename='img/youtube 1.png') }}" alt="">
                 </div>
                 <p>contato@minhabolsa.com.br</p>
             </div>
@@ -80,6 +169,6 @@
   
   
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="../js/script.js"></script>
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
 </body>
 </html>

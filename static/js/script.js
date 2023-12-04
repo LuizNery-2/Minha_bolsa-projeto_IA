@@ -27,6 +27,9 @@
             url: '/' + pagina,
             success: function (data) {
                 $('body').html(data);
+                
+                history.replaceState({}, '', '/' + pagina);
+                location.reload();
             },
             error: function (error) {
                 console.log('Erro ao carregar a página:', error);
@@ -54,6 +57,22 @@
         carregarPagina('iniciarsessao');
     }
     
+    function expandirImagem(imagem) {
+        var overlay = document.getElementById("overlay");
+        var imagemExpandida = document.getElementById("imagem-expandida");
+    
+        overlay.style.display = "block";
+        imagemExpandida.innerHTML = "<img src='" + imagem.src + "' alt='" + imagem.alt + "'>";
+        imagemExpandida.style.display = "block";
+    }
+    
+    function fecharImagem() {
+        var overlay = document.getElementById("overlay");
+        var imagemExpandida = document.getElementById("imagem-expandida");
+    
+        overlay.style.display = "none";
+        imagemExpandida.style.display = "none";
+    }
 
     menu()  
 

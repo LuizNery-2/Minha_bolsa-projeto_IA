@@ -18,6 +18,8 @@ button:hover
     cursor: pointer;
 }
 
+
+
 footer
 {
     width: 100%;
@@ -29,6 +31,8 @@ footer
     margin-top:10vh;
     position: absolute;
     bottom: 0;
+    
+    
   
     
 }
